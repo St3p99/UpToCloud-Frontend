@@ -26,7 +26,7 @@ echo "export PATH='$HOME/.pub-cache/bin':'$PATH'" >> ~/.bashrc && source ~/.bash
 echo "$(cat ~/.bashrc)"
 
 echo "disabling flutter cors"
-fluttercors -db -p $FLUTTER
+fluttercors -db
 
 # Build flutter for web
 
