@@ -6,7 +6,7 @@ then git pull && cd ..;
 else git clone https://github.com/flutter/flutter.git; fi
 
 FLUTTER=flutter/bin/flutter
-export PATH="$PATH":"$FLUTTER"
+echo 'export PATH="$PATH":"$FLUTTER"' >> ~/.bashrc && source ~/.bashrc
 
 # Configure flutter
 FLUTTER_CHANNEL=stable
@@ -15,11 +15,13 @@ flutter config --enable-web
 
 # Setup dart
 DART=`echo $FLUTTER | sed 's/flutter$/cache\/dart-sdk\/bin\/dart/'`
-export PATH="$PATH":"$DART"
+echo 'export PATH="$PATH":"$DART"' >> ~/.bashrc && source ~/.bashrc
+
 
 echo "installing flutter_cors"
 dart pub global activate flutter_cors
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+echo 'export PATH="$PATH":"$HOME/.pub-cache/bin"' >> ~/.bashrc && source ~/.bashrc
 echo "disabling flutter cors"
 fluttercors -db -p $FLUTTER
 
