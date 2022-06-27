@@ -17,8 +17,8 @@ $FLUTTER config --enable-web
 DART=`echo $FLUTTER | sed 's/flutter$/cache\/dart-sdk\/bin\/dart/'`
 echo $DART
 
-echo "installing flutter_corse"
-$DART dart pub global activate flutter_cors
+echo "installing flutter_cors"
+$DART pub global activate flutter_cors
 fluttercors -db -p $FLUTTER
 
 # Build flutter for web
