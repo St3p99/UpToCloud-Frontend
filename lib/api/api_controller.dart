@@ -1,11 +1,8 @@
-import 'dart:collection';
 import 'dart:convert';
 import 'dart:html';
 
 import 'package:admin/models/authentication_data.dart';
 import 'package:admin/models/document.dart';
-import 'package:admin/models/edit_metadata_model.dart';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
 import '../managers/rest_manager.dart';

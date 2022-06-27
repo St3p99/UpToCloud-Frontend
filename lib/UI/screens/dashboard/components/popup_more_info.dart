@@ -1,16 +1,9 @@
-import 'dart:convert';
-
 import 'package:admin/UI/responsive.dart';
 import 'package:admin/controllers/user_provider.dart';
-import 'package:cool_alert/cool_alert.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:http/http.dart';
 
-import '../../../../api/api_controller.dart';
 import '../../../../models/document.dart';
 import '../../../constants.dart';
-import 'feedback_dialog.dart';
 
 class PopupMoreInfo extends StatelessWidget {
   PopupMoreInfo({

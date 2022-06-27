@@ -1,14 +1,10 @@
-import 'dart:html';
-
 import 'package:admin/UI/constants.dart';
 import 'package:admin/UI/screens/dashboard/components/feedback_dialog.dart';
-import 'package:admin/api/api_controller.dart';
 import 'package:cool_alert/cool_alert.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dropzone/flutter_dropzone.dart';
-import 'package:dotted_border/dotted_border.dart';
-import 'package:http/http.dart';
 
 import '../../../../models/file_data_model.dart';
 import '../../../responsive.dart';

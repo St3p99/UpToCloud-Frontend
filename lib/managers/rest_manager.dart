@@ -1,12 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:universal_io/io.dart';
-import 'package:http_parser/http_parser.dart';
+
 import 'package:admin/models/file_data_model.dart';
 import 'package:http/http.dart';
-
-import '../support/constants.dart';
-import '../support/error_listener.dart';
+import 'package:http_parser/http_parser.dart';
+import 'package:universal_io/io.dart';
 
 enum TypeHeader { json, urlencoded, multipart }
 

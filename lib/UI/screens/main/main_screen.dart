@@ -1,10 +1,7 @@
-import 'package:admin/controllers/menu_controller.dart';
 import 'package:admin/UI/responsive.dart';
 import 'package:admin/UI/screens/dashboard/home_screen.dart';
-import 'package:admin/controllers/user_provider.dart';
+import 'package:admin/controllers/menu_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 import 'components/side_menu.dart';

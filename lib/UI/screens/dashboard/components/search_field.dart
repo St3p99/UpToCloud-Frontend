@@ -1,13 +1,11 @@
 import 'package:admin/UI/screens/dashboard/search_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../api/api_controller.dart';
 import '../../../../controllers/menu_controller.dart';
 import '../../../constants.dart';
-import '../../../responsive.dart';
 
 class SearchField extends StatefulWidget {
   const SearchField({

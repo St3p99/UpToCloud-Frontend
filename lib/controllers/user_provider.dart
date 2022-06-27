@@ -1,14 +1,10 @@
 import 'dart:async';
-import 'dart:convert';
-import 'package:universal_io/io.dart';
 
 import 'package:admin/api/api_controller.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:http/http.dart';
 
 import '../UI/screens/auth/login_screen.dart';
 import '../managers/persistent_storage_manager.dart';
-import '../managers/rest_manager.dart';
 import '../models/authentication_data.dart';
 import '../models/user.dart';
 import '../service/navigation_service.dart';

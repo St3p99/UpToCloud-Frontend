@@ -1,12 +1,9 @@
-import 'package:admin/UI/responsive.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import '../../constants.dart';
 import 'components/file_datatable_source.dart';
-import 'components/header.dart';
-
 import 'components/files_list.dart';
+import 'components/header.dart';
 import 'components/shared_file_datatable_source.dart';
 
 class HomeScreen extends StatelessWidget {

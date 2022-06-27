@@ -1,5 +1,4 @@
 import 'dart:collection';
-import 'dart:html';
 import 'dart:io';
 
 import 'package:admin/UI/screens/dashboard/components/delete_files_alert_dialog.dart';
@@ -12,17 +11,13 @@ import 'package:admin/UI/screens/dashboard/components/popup_upload.dart';
 import 'package:admin/UI/screens/dashboard/components/search_result_datatable_source.dart';
 import 'package:admin/UI/screens/dashboard/components/shared_file_datatable_source.dart';
 import 'package:admin/UI/screens/dashboard/components/shared_search_result_datatable_source.dart';
-import 'package:admin/api/api_controller.dart';
-import 'package:cool_alert/cool_alert.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:http/http.dart';
+
 import '../../../../models/document.dart';
 import '../../../../support/constants.dart';
 import '../../../constants.dart';
 import '../../../responsive.dart';
-import 'feedback_dialog.dart';
 import 'my_abstract_datatable_source.dart';
 
 class FilesList extends StatefulWidget {

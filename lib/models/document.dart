@@ -1,12 +1,6 @@
-import 'dart:collection';
-import 'dart:html';
-
-import 'package:admin/support/constants.dart';
-
 import '../support/file_utils.dart';
 import 'document_metadata.dart';
 import 'user.dart';
-import 'package:mime_type/mime_type.dart';
 
 const int FILE_SIZE_FRACTION_DIGITS = 2;
 

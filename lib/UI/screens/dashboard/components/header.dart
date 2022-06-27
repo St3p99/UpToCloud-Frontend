@@ -1,11 +1,8 @@
+import 'package:admin/UI/responsive.dart';
 import 'package:admin/UI/screens/dashboard/components/profile_card.dart';
 import 'package:admin/UI/screens/dashboard/components/search_field.dart';
 import 'package:admin/controllers/menu_controller.dart';
-import 'package:admin/UI/responsive.dart';
-import 'package:admin/controllers/user_provider.dart';
-import 'package:admin/support/extensions/string_capitalization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 import '../../../constants.dart';

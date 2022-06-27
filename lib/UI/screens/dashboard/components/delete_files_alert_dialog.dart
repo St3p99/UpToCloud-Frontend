@@ -1,10 +1,8 @@
 import 'package:admin/api/api_controller.dart';
-import 'package:admin/support/extensions/string_capitalization.dart';
 import 'package:cool_alert/cool_alert.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../models/document.dart';
-import '../../../behaviors/app_localizations.dart';
 import '../../../constants.dart';
 import '../../../responsive.dart';
 

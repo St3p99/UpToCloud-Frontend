@@ -2,7 +2,6 @@ import 'package:admin/UI/constants.dart';
 import 'package:admin/support/file_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../models/file_data_model.dart';
 import '../../../responsive.dart';

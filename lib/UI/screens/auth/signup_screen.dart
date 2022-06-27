@@ -3,16 +3,17 @@ import 'dart:html';
 import 'package:admin/UI/constants.dart';
 import 'package:admin/api/api_controller.dart';
 import 'package:admin/support/extensions/string_capitalization.dart';
+import 'package:cool_alert/cool_alert.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
+
 import '../../../controllers/user_provider.dart';
 import '../../../models/user.dart';
 import '../../../support/constants.dart';
 import '../../behaviors/app_localizations.dart';
 import '../../responsive.dart';
 import '../dashboard/components/feedback_dialog.dart';
-import 'package:cool_alert/cool_alert.dart';
 
 class SignupScreen extends StatefulWidget {
   static const routeName = '/signup';

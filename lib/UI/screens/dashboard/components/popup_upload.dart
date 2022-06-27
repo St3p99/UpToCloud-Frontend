@@ -1,4 +1,3 @@
-import 'dart:collection';
 import 'dart:html';
 import 'dart:ui' as ui;
 
@@ -6,19 +5,11 @@ import 'package:admin/UI/responsive.dart';
 import 'package:admin/UI/screens/dashboard/components/drop_zone_widget.dart';
 import 'package:admin/UI/screens/dashboard/components/dropped_file_widget.dart';
 import 'package:admin/api/api_controller.dart';
-import 'package:admin/support/extensions/string_capitalization.dart';
 import 'package:cool_alert/cool_alert.dart';
-import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dropzone/flutter_dropzone.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:http/http.dart';
 
-import '../../../../models/document.dart';
 import '../../../../models/file_data_model.dart';
-import '../../../../models/user.dart';
-import '../../../behaviors/app_localizations.dart';
 import '../../../constants.dart';
 import 'feedback_dialog.dart';
 

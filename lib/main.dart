@@ -5,16 +5,15 @@ import 'package:admin/UI/screens/main/main_screen.dart';
 import 'package:admin/controllers/menu_controller.dart';
 import 'package:admin/support/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-import '../controllers/user_provider.dart';
-import '../service/navigation_service.dart';
-import 'behaviors/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
-import 'behaviors/custom_scroll_behavior.dart';
+import 'UI/behaviors/app_localizations.dart';
+import 'UI/behaviors/custom_scroll_behavior.dart';
+import 'controllers/user_provider.dart';
+import 'service/navigation_service.dart';
 
 void main() {
   runApp(MyApp());

@@ -5,13 +5,12 @@ import 'package:admin/api/api_controller.dart';
 import 'package:admin/models/document.dart';
 import 'package:admin/support/constants.dart';
 import 'package:cool_alert/cool_alert.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart';
+
 import '../../../../models/user.dart';
 import '../../../constants.dart';
-import '../../../responsive.dart';
 import 'feedback_dialog.dart';
 
 class ReadersList extends StatefulWidget {
