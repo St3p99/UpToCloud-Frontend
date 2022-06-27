@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:admin/models/file_data_model.dart';
+import 'package:admin/support/constants.dart';
 import 'package:http/http.dart';
 import 'package:http_parser/http_parser.dart';
 import 'package:universal_io/io.dart';
@@ -17,7 +18,7 @@ class RestManager {
       {TypeHeader? type,
       Map<String, dynamic>? value,
       dynamic body,
-      bool httpsEnabled = false}) async {
+      bool httpsEnabled = HTTPS_ENABLED}) async {
     Uri uri;
     if (httpsEnabled)
       uri = Uri.https(serverAddress, servicePath, value);
@@ -96,7 +97,7 @@ class RestManager {
 
   Future<StreamedResponse> makePostMultiPartRequest(
       String serverAddress, String servicePath, dynamic files,
-      {bool httpsEnabled = false}) async {
+      {bool httpsEnabled = HTTPS_ENABLED}) async {
     Uri uri;
     if (httpsEnabled)
       uri = Uri.https(serverAddress, servicePath);
@@ -128,7 +129,7 @@ class RestManager {
 
   Future<StreamedResponse> makeGetMultiPartRequest(
       String serverAddress, String servicePath,
-      {bool httpsEnabled = false}) async {
+      {bool httpsEnabled = HTTPS_ENABLED}) async {
     Uri uri;
     if (httpsEnabled)
       uri = Uri.https(serverAddress, servicePath);
