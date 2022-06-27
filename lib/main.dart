@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:admin/UI/constants.dart';
 import 'package:admin/UI/screens/auth/login_screen.dart';
 import 'package:admin/UI/screens/auth/signup_screen.dart';
@@ -14,7 +16,17 @@ import 'controllers/user_provider.dart';
 import 'service/navigation_service.dart';
 
 void main() {
+  HttpOverrides.global = MyHttpOverrides();
   runApp(MyApp());
+}
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
 }
 
 class MyApp extends StatelessWidget {

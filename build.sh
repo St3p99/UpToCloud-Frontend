@@ -7,7 +7,6 @@ else git clone https://github.com/flutter/flutter.git; fi
 
 FLUTTER=flutter/bin
 echo "export PATH='$FLUTTER':'$PATH'" >> ~/.bashrc && source ~/.bashrc
-echo "$(cat ~/.bashrc)"
 
 # Configure flutter
 FLUTTER_CHANNEL=stable
