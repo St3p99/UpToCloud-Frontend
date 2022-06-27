@@ -17,11 +17,14 @@ flutter config --enable-web
 # Setup dart
 DART=`echo $FLUTTER | sed 's/flutter$/cache\/dart-sdk\/bin\/dart/'`
 echo "export PATH='$DART':'$PATH'" >> ~/.bashrc && source ~/.bashrc
+echo "$(cat ~/.bashrc)"
 
 
 echo "installing flutter_cors"
 dart pub global activate flutter_cors
-echo "export PATH='$HOME':'$PATH'/.pub-cache/bin'" >> ~/.bashrc && source ~/.bashrc
+echo "export PATH='$HOME/.pub-cache/bin':'$PATH'" >> ~/.bashrc && source ~/.bashrc
+echo "$(cat ~/.bashrc)"
+
 echo "disabling flutter cors"
 fluttercors -db -p $FLUTTER
 
