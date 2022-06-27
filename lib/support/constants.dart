@@ -4,7 +4,7 @@
 
 const bool DEBUG_MODE = false;
 
-const String ADDRESS_STORE_SERVER = "localhost:8180";
+const String ADDRESS_STORE_SERVER = "springbootapp:8180";
 const String ADDRESS_AUTHENTICATION_SERVER = "keycloak:8080";
 const String APPLICATION_TMP_DIRECTORY = "./tmp";
 // AUTH

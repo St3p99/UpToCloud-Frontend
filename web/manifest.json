@@ -1,11 +1,11 @@
 {
-    "name": "admin",
-    "short_name": "admin",
+    "name": "UpToCloud",
+    "short_name": "UpToCloud",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Upload file to the Cloud and Share with anyone!",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
