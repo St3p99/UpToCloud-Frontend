@@ -169,10 +169,9 @@ class RestManager {
   Future<Response> makePostRequest(
       String serverAddress, String servicePath, dynamic body,
       {Map<String, dynamic>? value,
-      TypeHeader type = TypeHeader.json,
-      bool httpsEnabled = false}) async {
+      TypeHeader type = TypeHeader.json}) async {
     return _makeRequest(serverAddress, servicePath, "post",
-        type: type, body: body, value: value, httpsEnabled: httpsEnabled);
+        type: type, body: body, value: value);
   }
 
   Future<Response> makeGetRequest(String serverAddress, String servicePath,
