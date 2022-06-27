@@ -14,7 +14,6 @@ import 'package:http/http.dart';
 
 import '../../../../models/document.dart';
 import '../../../../models/user.dart';
-import '../../../behaviors/app_localizations.dart';
 import '../../../constants.dart';
 import 'feedback_dialog.dart';
 
@@ -282,9 +281,7 @@ class _PopupShareState extends State<PopupShare> {
     return value != null && EmailValidator.validate(value)
         ? null
         : "* " +
-            AppLocalizations.of(context)!
-                .translate("enter_valid_email")!
-                .capitalize;
+            "Enter a valid email";
   }
 
   Future<User?> _getUser(String email) async {

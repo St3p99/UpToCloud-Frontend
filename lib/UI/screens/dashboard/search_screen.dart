@@ -9,7 +9,6 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 import '../../../../api/api_controller.dart';
 import '../../../../models/document.dart';
-import '../../behaviors/app_localizations.dart';
 import '../../constants.dart';
 import '../../responsive.dart';
 import 'components/feedback_dialog.dart';
@@ -278,10 +277,7 @@ class _SearchScreenState extends State<SearchScreen> {
         child: SizedBox(
             height: MediaQuery.of(context).size.height * 0.10,
             width: MediaQuery.of(context).size.width * 0.10,
-            child: Text(AppLocalizations.of(context)!
-                    .translate("no_result")!
-                    .capitalize +
-                "!")));
+            child: Text("No result!")));
   }
 
   Widget buildContent() {

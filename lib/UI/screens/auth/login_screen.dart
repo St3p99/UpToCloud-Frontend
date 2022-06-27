@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import '../../../controllers/user_provider.dart';
 import '../../../support/constants.dart';
 import '../../../support/login_result.dart';
-import '../../behaviors/app_localizations.dart';
 import '../../responsive.dart';
 import '../dashboard/components/feedback_dialog.dart';
 
@@ -231,30 +230,24 @@ class _LoginScreenState extends State<LoginScreen> {
     if (DEBUG_MODE) return null;
     if (value.isEmpty) {
       return "* " +
-          AppLocalizations.of(context)!.translate("required")!.capitalize;
+          "Required";
     }
     else if (EmailValidator.validate(value))
       return null;
     else
       return "* " +
-          AppLocalizations.of(context)!
-              .translate("enter_valid_email")!
-              .capitalize;
+          "Enter a valid email";
   }
 
   _validatePassword(String value) {
     if (DEBUG_MODE) return null;
     if (value.isEmpty)
       return "* " +
-          AppLocalizations.of(context)!.translate("required")!.capitalize;
+          "Required";
     else if (value.length < 6)
-      return AppLocalizations.of(context)!
-          .translate("pwd_min_6_char")!
-          .capitalize;
+      return "Password should be at least 6 characters";
     else if (value.length > 15)
-      return AppLocalizations.of(context)!
-          .translate("pwd_max_25_char")!
-          .capitalize;
+      return "Password should not be greater than 25 characters";
     else
       return null;
   }
