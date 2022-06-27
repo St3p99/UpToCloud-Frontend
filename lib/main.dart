@@ -20,11 +20,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    Locale defaultLanguage = Locale("en");
     return MaterialApp(
         scrollBehavior: CustomScrollBehavior(),
         debugShowCheckedModeBanner: false,
@@ -57,34 +54,6 @@ class MyApp extends StatelessWidget {
                 builder: (context, userProvider, _) {
                   return Wrapper(userProvider: userProvider);
                 })),
-        localizationsDelegates: [
-          AppLocalizations.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-        ],
-        supportedLocales: [
-          const Locale('it', null),
-          const Locale('en', null)
-        ],
-        localeResolutionCallback: (locale, supportedLocales) {
-          if (defaultLanguage != null) {
-            Intl.defaultLocale = defaultLanguage.toLanguageTag();
-            return defaultLanguage;
-          }
-          if (locale == null) {
-            Intl.defaultLocale =
-                supportedLocales.first.toLanguageTag();
-            return supportedLocales.first;
-          }
-          for (var supportedLocale in supportedLocales) {
-            if (supportedLocale.languageCode == locale.languageCode) {
-              Intl.defaultLocale = supportedLocale.toLanguageTag();
-              return supportedLocale;
-            }
-          }
-          Intl.defaultLocale = supportedLocales.first.toLanguageTag();
-          return supportedLocales.first;
-        });
   }
 }
 
