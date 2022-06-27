@@ -32,7 +32,7 @@ class ApiController {
       params["password"] = password;
       String result = (await _restManager.makePostRequest(
           ADDRESS_AUTHENTICATION_SERVER, REQUEST_LOGIN, params,
-          type: TypeHeader.urlencoded, httpsEnabled: false))
+          type: TypeHeader.urlencoded))
           .body;
       AuthenticationData _authenticationData = AuthenticationData.fromJson(jsonDecode(result));
       _restManager.token = _authenticationData.accessToken!;
@@ -47,7 +47,7 @@ class ApiController {
     params["refresh_token"] = refreshToken;
     Response response = await _restManager.makePostRequest(
         ADDRESS_AUTHENTICATION_SERVER, REQUEST_LOGIN, params,
-        type: TypeHeader.urlencoded, httpsEnabled: false);
+        type: TypeHeader.urlencoded);
     String result = response.body;
     AuthenticationData _authenticationData = AuthenticationData.fromJson(jsonDecode(result));
     _restManager.token = _authenticationData.accessToken!;
@@ -65,7 +65,7 @@ class ApiController {
     params["refresh_token"] = refreshToken;
     Response response = await _restManager.makePostRequest(
         ADDRESS_AUTHENTICATION_SERVER, REQUEST_LOGOUT, params,
-        type: TypeHeader.urlencoded, httpsEnabled: false);
+        type: TypeHeader.urlencoded);
     return response;
   }
 
