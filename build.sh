@@ -9,7 +9,6 @@ FLUTTER=flutter/bin/flutter
 
 # Configure flutter
 FLUTTER_CHANNEL=stable
-
 $FLUTTER channel $FLUTTER_CHANNEL
 $FLUTTER config --enable-web
 
@@ -19,9 +18,10 @@ echo $DART
 
 echo "installing flutter_cors"
 $DART pub global activate flutter_cors
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 fluttercors -db -p $FLUTTER
 
 # Build flutter for web
-$FLUTTER config --enable-web
+
 $FLUTTER build web --release
 echo "OK"
