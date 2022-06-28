@@ -21,8 +21,8 @@ echo "installing flutter_cors"
 dart pub global activate flutter_cors
 echo "export PATH='$HOME/.pub-cache/bin':'$PATH'" >> ~/.bashrc && source ~/.bashrc
 
-echo "disabling flutter cors"
-fluttercors -db
+# echo "disabling flutter cors"
+# fluttercors -db
 
 # Build flutter for web
 
