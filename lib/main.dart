@@ -16,7 +16,7 @@ import 'controllers/user_provider.dart';
 import 'service/navigation_service.dart';
 
 void main() {
-  HttpOverrides.global = MyHttpOverrides();
+  if(HTTPS_ENABLED) HttpOverrides.global = MyHttpOverrides();
   runApp(MyApp());
 }
 
