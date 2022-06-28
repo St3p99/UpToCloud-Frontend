@@ -44,7 +44,7 @@ class RestManager {
       Map<String, String> headers = Map();
 
       if(contentType != null)headers[HttpHeaders.contentTypeHeader] = contentType;
-      if (token != null) {
+      if (token != null && servicePath != REQUEST_ADD_USER) {
         headers[HttpHeaders.authorizationHeader] = 'bearer $token';
       }
 

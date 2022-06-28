@@ -268,6 +268,7 @@ class _LoginScreenState extends State<LoginScreen> {
         _loginResult = loginResult;
       });
       switch (_loginResult) {
+        case LoginResult.logged: {} break;
         case LoginResult.error_wrong_credentials:
           {
             ScaffoldMessenger.of(context).clearSnackBars();
