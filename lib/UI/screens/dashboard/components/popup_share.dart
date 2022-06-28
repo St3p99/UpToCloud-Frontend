@@ -256,7 +256,7 @@ class _PopupShareState extends State<PopupShare> {
       itemBuilder: (context, User suggestion) {
         return ListTile(
           leading: SvgPicture.asset(
-            "icons/menu_profile.svg",
+            "assets/icons/menu_profile.svg",
             color: Colors.white,
             height: 20,
           ),

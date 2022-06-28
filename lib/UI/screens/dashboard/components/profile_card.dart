@@ -28,7 +28,7 @@ class ProfileCard extends StatelessWidget {
       child: Row(
         children: [
           SvgPicture.asset(
-            "icons/menu_profile.svg",
+            "assets/icons/menu_profile.svg",
             height: 20, color: Colors.white,
           ),
           if (!Responsive.isMobile(context))

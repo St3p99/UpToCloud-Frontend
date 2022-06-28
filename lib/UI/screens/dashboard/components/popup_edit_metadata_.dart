@@ -135,7 +135,7 @@ class _PopupEditMetadataState extends State<PopupEditMetadata> {
                             Container(
                               height: 30,
                               child: Image.asset(
-                                "icons/filetype/"+widget.file.icon!,
+                                "assets/icons/filetype/"+widget.file.icon!,
                               ),
                             ),
                             Padding(
