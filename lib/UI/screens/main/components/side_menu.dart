@@ -20,7 +20,7 @@ class SideMenu extends StatelessWidget {
             onTap: () {
               Provider.of<MenuController>(context, listen: false).updateWidget(HomeScreen());
             }, // GO TO HOME
-            child: Image.asset("assets/images/logo.png")
+            child: Image.asset("assets/assets/images/logo.png")
           )),
           DrawerListTile(
             title: "Home",
