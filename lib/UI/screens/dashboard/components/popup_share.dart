@@ -68,6 +68,15 @@ class _PopupShareState extends State<PopupShare> {
   }
 
   void _pushData() async {
+    if(_selectedUsers.length <= 0){
+      FeedbackDialog(
+          type: CoolAlertType.error,
+          context: context,
+          title: "ERROR",
+          message: "No users selected")
+          .show();
+      return;
+  }
     Response? response =
         await new ApiController().addReaders(widget.file, _selectedUsers);
     switch (response!.statusCode) {
@@ -325,7 +334,7 @@ class _PopupShareState extends State<PopupShare> {
                   vertical: 10.0,
                 ),
                 decoration: BoxDecoration(
-                  color: bgColor,
+                  color: primaryColor70,
                   borderRadius: BorderRadius.circular(100.0),
                 ),
                 child: Text(

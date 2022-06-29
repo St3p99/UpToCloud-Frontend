@@ -192,7 +192,7 @@ class PopupMoreInfo extends StatelessWidget {
           vertical: 10.0,
         ),
         decoration: BoxDecoration(
-          color: bgColor,
+          color: primaryColor70,
           borderRadius: BorderRadius.circular(100.0),
         ),
         child: Text(

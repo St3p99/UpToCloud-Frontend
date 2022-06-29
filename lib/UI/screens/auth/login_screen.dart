@@ -71,8 +71,8 @@ class _LoginScreenState extends State<LoginScreen> {
         width: Responsive.isDesktop(context)
             ? MediaQuery.of(context).size.width * 0.3
             : Responsive.isTablet(context)
-            ? MediaQuery.of(context).size.width * 0.4
-            : MediaQuery.of(context).size.width * 0.7,
+            ? MediaQuery.of(context).size.width * 0.5
+            : MediaQuery.of(context).size.width * 0.85,
         clipBehavior: Clip.antiAliasWithSaveLayer,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -268,7 +268,9 @@ class _LoginScreenState extends State<LoginScreen> {
         _loginResult = loginResult;
       });
       switch (_loginResult) {
-        case LoginResult.logged: {} break;
+        case LoginResult.logged:
+          {}
+          break;
         case LoginResult.error_wrong_credentials:
           {
             ScaffoldMessenger.of(context).clearSnackBars();

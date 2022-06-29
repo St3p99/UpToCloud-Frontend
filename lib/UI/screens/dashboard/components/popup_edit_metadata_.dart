@@ -135,7 +135,7 @@ class _PopupEditMetadataState extends State<PopupEditMetadata> {
                             Container(
                               height: 30,
                               child: Image.asset(
-                                "assets/icons/filetype/"+widget.file.icon!,
+                                "assets/assets/icons/filetype/"+widget.file.icon!,
                               ),
                             ),
                             Padding(
@@ -329,7 +329,7 @@ class _PopupEditMetadataState extends State<PopupEditMetadata> {
                   vertical: 10.0,
                 ),
                 decoration: BoxDecoration(
-                  color: bgColor,
+                  color: primaryColor70,
                   borderRadius: BorderRadius.circular(100.0),
                 ),
                 child: Text(
