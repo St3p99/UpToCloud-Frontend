@@ -48,7 +48,6 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   void initState() {
-    _initTagSuggestions();
     super.initState();
     _focusNode = FocusNode();
     _textEditingController.addListener(() => refreshState(() {}));
@@ -56,6 +55,7 @@ class _SearchScreenState extends State<SearchScreen> {
       _textEditingController.text = widget.input!;
       _search();
     }
+    _initTagSuggestions();
   }
 
   @override
@@ -134,6 +134,8 @@ class _SearchScreenState extends State<SearchScreen> {
                   ]),
                   Row(children: [
                     Expanded(child: _formField()),
+                    Padding(padding: EdgeInsets.only(right: defaultPadding/2)),
+                    Expanded(child: _searchButton()),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: defaultPadding),
                     ),
@@ -146,7 +148,11 @@ class _SearchScreenState extends State<SearchScreen> {
                   ]),
                 ] else ...[
                   _tagsWidget(),
-                  _formField(),
+                  Row(children: [
+                    Expanded(child: _formField()),
+                    Padding(padding: EdgeInsets.only(right: defaultPadding/2)),
+                    Expanded(child: _searchButton()),
+                  ],),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: defaultPadding),
                   ),
@@ -165,6 +171,16 @@ class _SearchScreenState extends State<SearchScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  _searchButton(){
+    return InkWell(
+      child: Icon(
+          Icons.search,
+          color: primaryColor70
+      ),
+      onTap: () => _search(),
     );
   }
 
@@ -417,7 +433,7 @@ class _SearchScreenState extends State<SearchScreen> {
         _tempList.add(tag);
       }
     }
-    for (int index = 0; _tempList.length < 5 && index < _tags.length; index++) {
+    for (int index = 0; _tempList.length < 10 && index < _tags.length; index++) {
       String tag = _tags[index];
       if (!_tempList.contains(tag)) _tempList.add(tag);
     }

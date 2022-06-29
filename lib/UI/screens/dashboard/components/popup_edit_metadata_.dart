@@ -40,6 +40,7 @@ class _PopupEditMetadataState extends State<PopupEditMetadata> {
 
   @override
   void initState() {
+    super.initState();
     _initTagSuggestions();
     setState((){
       _filename = widget.file.name;
@@ -51,7 +52,6 @@ class _PopupEditMetadataState extends State<PopupEditMetadata> {
         _tagsSelected = widget.file.metadata.tags!;
       else _tagsSelected = List.empty(growable: true);
     });
-    super.initState();
     _focusNode = FocusNode();
     _tagsEditingController.addListener(() => refreshState(() {}));
   }
@@ -124,27 +124,6 @@ class _PopupEditMetadataState extends State<PopupEditMetadata> {
                       Text(
                         "Edit Metadata",
                         style: Theme.of(context).textTheme.headline6,
-                      ),
-                      Padding(
-                          padding:
-                          EdgeInsets.symmetric(vertical: defaultPadding/2)),
-                      Container(
-                        constraints: BoxConstraints(minWidth: 200),
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 30,
-                              child: Image.asset(
-                                "assets/assets/icons/filetype/"+widget.file.icon!,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                              const EdgeInsets.symmetric(horizontal: defaultPadding),
-                              child: Text(widget.file.name),
-                            ),
-                          ],
-                        ),
                       ),
                       Padding(
                           padding:
@@ -303,7 +282,7 @@ class _PopupEditMetadataState extends State<PopupEditMetadata> {
             InkWell(
               child: Icon(
                 Icons.clear,
-                color: Colors.grey.shade700,
+                color: primaryColor70
               ),
               onTap: () => _tagsEditingController.clear(),
             )
@@ -386,7 +365,7 @@ class _PopupEditMetadataState extends State<PopupEditMetadata> {
         _tempList.add(tag);
       }
     }
-    for (int index = 0; _tempList.length < 5 && index < _tags.length; index++) {
+    for (int index = 0; _tempList.length < 10 && index < _tags.length; index++) {
       String tag = _tags[index];
       if (!_tempList.contains(tag)) _tempList.add(tag);
     }

@@ -25,10 +25,13 @@ class FileDataTableSource extends MyAbstractDataTableSource{
             constraints: BoxConstraints(minWidth: 200),
             child: Row(
               children: [
-                Padding(
-                  padding: EdgeInsets.all(defaultPadding/4),
-                  child: Image.asset(
-                    "assets/assets/icons/filetype/"+file.icon!,
+                Container(
+                  height: 30,
+                  child: Padding(
+                    padding: EdgeInsets.all(defaultPadding/4),
+                    child: Image.asset(
+                      "assets/assets/icons/filetype/"+file.icon!,
+                    ),
                   ),
                 ),
                 Padding(
