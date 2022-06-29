@@ -135,7 +135,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   Row(children: [
                     Expanded(child: _formField()),
                     Padding(padding: EdgeInsets.only(right: defaultPadding/2)),
-                    Expanded(child: _searchButton()),
+                    _searchButton(),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: defaultPadding),
                     ),
@@ -151,7 +151,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   Row(children: [
                     Expanded(child: _formField()),
                     Padding(padding: EdgeInsets.only(right: defaultPadding/2)),
-                    Expanded(child: _searchButton()),
+                    _searchButton(),
                   ],),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: defaultPadding),

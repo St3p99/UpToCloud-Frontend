@@ -73,7 +73,7 @@ class DroppedFileWidget extends StatelessWidget {
           Padding(padding: EdgeInsets.only(bottom: defaultPadding/2),),
           Container(
             height: 50,
-              child: Image.asset("assets/assets/icons/filetype/"+FileUtils.loadIcon(file!.mime))),
+              child: Image.asset("assets/icons/filetype/"+FileUtils.loadIcon(file!.mime))),
           Padding(padding: EdgeInsets.only(bottom: defaultPadding),),
           Text('Name: ${file?.name}',
               style: TextStyle(fontWeight: FontWeight.w800, fontSize: Theme

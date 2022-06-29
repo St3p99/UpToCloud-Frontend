@@ -30,7 +30,7 @@ class FileDataTableSource extends MyAbstractDataTableSource{
                   child: Padding(
                     padding: EdgeInsets.all(defaultPadding/4),
                     child: Image.asset(
-                      "assets/assets/icons/filetype/"+file.icon!,
+                      "assets/icons/filetype/"+file.icon!,
                     ),
                   ),
                 ),

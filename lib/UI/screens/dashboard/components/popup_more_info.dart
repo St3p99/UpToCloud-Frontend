@@ -39,7 +39,7 @@ class PopupMoreInfo extends StatelessWidget {
                           Container(
                             height: 30,
                             child: Image.asset(
-                              "assets/assets/icons/filetype/"+file.icon!,
+                              "assets/icons/filetype/"+file.icon!,
                             ),
                           ),
                           Padding(

@@ -352,7 +352,7 @@ class _PopupEditMetadataState extends State<PopupEditMetadata> {
   }
 
   _displayTagSuggestions() {
-    return _tagsSelected.isNotEmpty
+    return _tags.isNotEmpty
         ? _buildTagsSuggestionWidget()
         : Text('No Tags added');
   }
