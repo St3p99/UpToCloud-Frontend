@@ -5,8 +5,10 @@
 const bool DEBUG_MODE = false;
 const bool HTTPS_ENABLED = true;
 const String ADDRESS_STORE_SERVER = "springbootapp:8180";
-const String ADDRESS_AUTHENTICATION_SERVER = "keycloak:8443";
+const String ADDRESS_AUTHENTICATION_SERVER = "keycloak:8444";
 const String APPLICATION_TMP_DIRECTORY = "./tmp";
+
+
 // AUTH
 const String REALM = "UpToCloud-Realm";
 const String CLIENT_ID = "uptocloud-microservice";
