@@ -202,7 +202,7 @@ class _FilesListState extends State<FilesList> {
                   .apply(displayColor: Colors.white, bodyColor: Colors.white)),
           child: PaginatedDataTable(
             rowsPerPage: DEFAULT_PAGE_SIZE,
-            showCheckboxColumn: _selectedFiles.length > 2,
+            showCheckboxColumn: _selectedFiles.length > 1,
             columnSpacing: defaultPadding,
             columns: [
               DataColumn(
