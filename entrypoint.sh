@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the port
-PORT=80
+PORT=5000
 
 # switch directories
 cd build/web/

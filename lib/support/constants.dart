@@ -1,13 +1,9 @@
-// general
-
-
-
+// GENERAL
+const String ADDRESS_AUTHENTICATION_SERVER = "uptocloud.azurewebsites.net";
+const String ADDRESS_STORE_SERVER = "uptocloud.azurewebsites.net";
 const bool DEBUG_MODE = false;
-const bool HTTPS_ENABLED = true;
-const String ADDRESS_STORE_SERVER = "springbootapp:8180";
-const String ADDRESS_AUTHENTICATION_SERVER = "keycloak:8444";
+const bool HTTPS_ENABLED = false;
 const String APPLICATION_TMP_DIRECTORY = "./tmp";
-
 
 // AUTH
 const String REALM = "UpToCloud-Realm";
@@ -18,8 +14,6 @@ const String REQUEST_LOGIN =
 
 const String REQUEST_LOGOUT =
     "/auth/realms/" + REALM + "/protocol/openid-connect/logout";
-
-// REQUEST PATHS
 
 // - SEARCH CONTROLLER
 const String REQUEST_LOAD_RECENT_FILES = "/api/search/recent";
